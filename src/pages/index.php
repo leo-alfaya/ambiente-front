@@ -9,8 +9,7 @@
         <link rel="stylesheet" href="./css/index.min.css">
     </head>
     <body>                  
-        <div id="content-home">
-                        
+        <div id="content-home">            
         </div>     
 
         <script src="./js/main.min.js"></script>        

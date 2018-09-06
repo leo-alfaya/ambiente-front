@@ -36,7 +36,7 @@ gulp.task('php', function(){
 
 // ------ Css separados cada um em um arquivo -----
 gulp.task('css:sass', function(){
-  gulp.src(['./src/scss/*.scss'])
+  gulp.src(['./src/sass/*.sass'])
   .pipe(plumber())
   .pipe(sass())
   //.pipe(concat('main.css'))
@@ -94,7 +94,7 @@ gulp.task('browser-sync', function(){
 
 
 gulp.task('build', ['php', 'css:sass', 'css:vendor', 'js:uglify', 'js:vendor', 'img', 'fonts'], function(){
-  gulp.watch("./src/scss/**/*.scss", ["css:sass"]);
+  gulp.watch("./src/sass/**/*.sass", ["css:sass"]);
   gulp.watch("./src/js/*.js", ["js:uglify"]);
   gulp.watch("./src/pages/**/*.php", ["php"]);
   gulp.watch("./src/img/**/*", ["img"]);
